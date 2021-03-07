@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+$primary-color: #6495ED;
+$accent-color1: #FAEBD7;
+$accent-color2: #DEB887;
+$accent-color3: gray; 
+$white: white; 
+$black: black; 
+$font-body: 'Helvetica' , 'Arial' , sans-serif;
+$font-headings: 'Lora', serif;
+
+@mixin linkstyle ($color) {
+    color: $color;
+    text-decoration: none;
+}
+
+@mixin linkhover ($color) {
+    color: $color;
+    text-decoration: underline;
+}
+
+header {
+    background-color: $primary-color;
+    text-align: right;
+    padding: 2rem;
+    font-size: 0.9rem;
+    ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+            padding: 0.5rem;
+        }
+    }
+}
+ 
+h1, h2, h3 {
+    font-family: $font-headings;
+}
+
+body {
+    background-color: $accent-color1;
+    font-family: $font-body;
+    margin: 0;
+}
+
+nav, h1 {
+    a, a:visited {
+        @include linkstyle($accent-color1); 
+    }
+    a:hover {
+        @include linkhover($white); 
+    }
+}
+
+p {
+    a, a:visited {
+        @include linkstyle($primary-color); 
+    }
+    a:hover {
+        @include linkhover($primary-color); 
+    }
+}
+
+article p, section h2, nav, h1 {
+    a:active {
+        color: $accent-color2;
+    }
+}
+
+
+h2 {
+    a, a:visited {
+        @include linkstyle($black); 
+    }
+    a:hover {
+        @include linkhover($primary-color); 
+    }
+
+}
+
+article {
+    background-color: $white;
+    margin: 2rem 1.5rem;
+    padding: 2rem;
+    box-shadow: 3px 3px 6px lightgray;
+    h2 {
+        margin-top: 0.5rem;
+    }
+    
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    max-width: 90%;
+    margin-top: 2rem;
+}
+
+.post-date {
+    color: $accent-color3;
+    font-size: smaller;
+}
+
+@media only screen and (min-width: 800px) {
+
+    body {
+        div {
+        display: flex;
+        }
+        header {
+        flex: 1 1 50%;
+        padding: 2.5rem;
+        }
+    }
+
+    article {
+        margin: 2rem 4rem;
+    }
+}

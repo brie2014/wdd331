@@ -1,3 +1,4 @@
+/*** uncss> filename: main.css ***/
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 header {
   background-color: #6495ED;
@@ -10,7 +11,7 @@ header {
     header ul li {
       padding: 0.5rem; }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: "Lora", serif; }
 
 body {
@@ -70,3 +71,4 @@ img {
 
   article {
     margin: 2rem 4rem; } }
+
